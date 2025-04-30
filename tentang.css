@@ -1,24 +1,180 @@
-body {
-    background-color: rgb(255, 255, 255);
-}
-h1 {
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-.container{
-    display:grid;
-    justify-content: center;
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Header utama */
+  .main-header {
+    background-color: #800000;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-}
-
-.item{
-    flex: 1;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .logo-text strong {
+    font-size: 18px;
+  }
+  
+  .logo-text span {
+    font-size: 14px;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  h1 {
     text-align: center;
+    margin-top: 40px;
+    font-size: 32px;
+    color: #800000;
+    animation: fadeInDown 1s ease;
+  }
+  
+  /* Section Tentang */
+  .head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     justify-content: center;
-}
-.item:hover{
-    background-color: rgba(255, 255, 255, 0.73);
-}
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .head img {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .head img:hover {
+    transform: scale(1.05);
+  }
+  
+  .head p {
+    flex: 1;
+    font-size: 16px;
+    text-align: justify;
+    animation: fadeIn 1.2s ease;
+  }
+  
+  /* Garis pemisah */
+  hr {
+    border: none;
+    border-top: 2px dashed #ccc;
+    margin: 30px auto;
+    width: 80%;
+  }
+  
+  /* Animasi */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .head {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  }
+  
