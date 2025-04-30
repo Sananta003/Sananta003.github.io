@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(83, 144, 236);
+}
+h1 {
+    text-align: center;
+    color: rgb(255, 149, 1);
+}
+p {
+    color: aliceblue;
+    text-size-adjust: 100px;
+}
+.container{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.head{
+    display: flex;
+}
+.item{
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.73);
+}
+
+.po{
+    justify-content: center;
+    align-items: center;
+}
