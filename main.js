@@ -31,4 +31,4 @@ function stopAutoScroll() {
   clearInterval(autoScrollInterval);
 }
 
-document.addEventListener("DOMContentLoaded", startAutoScroll);
+
