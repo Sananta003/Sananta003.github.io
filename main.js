@@ -1,5 +1,5 @@
 let autoScrollInterval;
-let currentDirection = 1; // 1 = ke kanan, -1 = ke kiri
+let currentDirection = 1;
 
 function scrollContent(direction) {
   const container = document.getElementById("scrollContainer");
@@ -24,7 +24,7 @@ if (container.scrollLeft <= 10) {
     }
 
  scrollContent(currentDirection);
-  }, 4000); // Ganti setiap 4 detik
+  }, 4000); 
 }
 
 function stopAutoScroll() {
