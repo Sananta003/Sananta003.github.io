@@ -15,20 +15,22 @@ function startAutoScroll() {
   autoScrollInterval = setInterval(() => {
     const container = document.getElementById("scrollContainer");
 
-if (container.scrollLeft + container.offsetWidth >= container.scrollWidth - 10) {
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth - 10) {
       currentDirection = -1;
     }
 
-if (container.scrollLeft <= 10) {
+    if (container.scrollLeft <= 10) {
       currentDirection = 1;
     }
 
- scrollContent(currentDirection);
-  }, 4000); 
+    scrollContent(currentDirection);
+  }, 5000); 
 }
 
 function stopAutoScroll() {
   clearInterval(autoScrollInterval);
 }
 
-
+window.onload = function() {
+  startAutoScroll();
+};
